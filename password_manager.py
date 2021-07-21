@@ -1,10 +1,10 @@
 from cryptography.fernet import Fernet
 
-'''
+
 def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
-        key_file.write(key)'''
+        key_file.write(key)
 
 
 def load_key():
@@ -14,17 +14,31 @@ def load_key():
     return key
 
 
-key = load_key()
+try:
+    key = load_key()
+except: # If error.
+    write_key() # write the key.
+    key = load_key() # Now, load the key
+
 fer = Fernet(key)
 
 
 def view():
-    with open('passwords.txt', 'r') as f:
-        for line in f.readlines():
-            data = line.rstrip()
-            user, passw = data.split("|")
-            print("User:", user, "| Password:",
-                  fer.decrypt(passw.encode()).decode())
+    try:
+        f =  open('passwords.txt', 'r')
+        f.close()
+    except FileNotFoundError: # If the user view the file without adding any entry, this error is raised.
+        f = open('passwords.txt', 'w')
+        f.write('') # Dummy text.
+        f.close()
+    finally:
+        with open('passwords.txt', 'r') as f:
+            for line in f.readlines():
+                data = line.rstrip()
+                user, passw = data.split("|")
+                print("User:", user, "| Password:",
+                      fer.decrypt(passw.encode()).decode())
+
 
 
 def add():
