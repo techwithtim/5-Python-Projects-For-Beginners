@@ -26,6 +26,7 @@ fer = Fernet(key)
 def view():
     try:
         f =  open('passwords.txt', 'r')
+        f.close()
     except FileNotFoundError: # If the user view the file without adding any entry, this error is raised.
         f = open('passwords.txt', 'w')
         f.write('') # Dummy text.
