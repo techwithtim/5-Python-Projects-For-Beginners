@@ -1,40 +1,67 @@
-print("Welcome to my computer quiz!")
+print('Wellcome to my Computer game! ')
 
-playing = input("Do you want to play? ")
-
-if playing.lower() != "yes":
+playing = input('Do u Want to play!')
+if playing != 'yes':
     quit()
 
-print("Okay! Let's play :)")
+print("Ok Let's play : ) ")
 score = 0
 
-answer = input("What does CPU stand for? ")
-if answer.lower() == "central processing unit":
+
+
+
+print('''What Does CPU Stands for?
+            a)central processing unit.
+            b)graphics processing unit.
+            c)random access memory.
+            d)power supply
+        ''')
+answer = input('answer :')       
+if answer == 'a':
     print('Correct!')
     score += 1
 else:
-    print("Incorrect!")
+    print('Incrrect!!!')
 
-answer = input("What does GPU stand for? ")
-if answer.lower() == "graphics processing unit":
+print('''What Does GPU Stands for?
+            a)central processing unit.
+            b)graphics processing unit.
+            c)random access memory.
+            d)power supply
+
+        ''')
+answer = input('answer :')
+if answer == 'b':
     print('Correct!')
     score += 1
 else:
-    print("Incorrect!")
+    print('Incrrect!!!')          
 
-answer = input("What does RAM stand for? ")
-if answer.lower() == "random access memory":
+print('''What Does RAM Stands for?
+            a)central processing unit.
+            b)graphics processing unit.
+            c)random access memory.
+            d)power supply 
+        ''')
+answer = input('answer :') 
+if answer == 'random access memory':
     print('Correct!')
     score += 1
 else:
-    print("Incorrect!")
+    print('Incrrect!!!')  
 
-answer = input("What does PSU stand for? ")
-if answer.lower() == "power supply":
+print('''What Does PSU Stands for?
+            a)central processing unit.
+            b)graphics processing unit.
+            c)random access memory.
+            d)power supply 
+        ''')
+answer = input('answer :')
+if answer == 'd':
     print('Correct!')
     score += 1
 else:
-    print("Incorrect!")
+    print('Incrrect!!!')
 
-print("You got " + str(score) + " questions correct!")
-print("You got " + str((score / 4) * 100) + "%.")
+print('You got' +  str(score) + 'questions correct!')
+print('You got' +  str((score/4) * 100)  + '%.')
