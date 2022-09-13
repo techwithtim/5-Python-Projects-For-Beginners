@@ -13,12 +13,12 @@ while True:
     if user_input not in options:
         continue
 
-    random_number = random.randint(0, 2)
-    # rock: 0, paper: 1, scissors: 2
-    computer_pick = options[random_number]
-    print("Computer picked", computer_pick + ".")
-
     def rps_match(user_input_param):
+
+        random_number = random.randint(0, 2)
+        # rock: 0, paper: 1, scissors: 2
+        computer_pick = options[random_number]
+        print("Computer picked", computer_pick + ".")
 
         if user_input_param == "rock" and computer_pick == "scissors":
             print("You won!")
