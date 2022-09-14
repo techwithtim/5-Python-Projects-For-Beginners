@@ -12,11 +12,13 @@ while True:
     if user_input not in options:
         continue
 
-    if rps_match.rps_match(user_input) == "user_wins":
+    result = rps_match.rps_match(user_input)
+
+    if result == "user_wins":
         print("You won!")
         user_wins += 1
 
-    elif rps_match.rps_match(user_input) == "computer_wins":
+    elif result == "computer_wins":
         print("You lost!")
         computer_wins += 1
     else:
