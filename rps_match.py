@@ -18,6 +18,7 @@ def rps_match(user_input_param):
 
     elif user_input_param == "scissors" and computer_pick == "paper":
         return "user_wins"
-
+    elif user_input_param == computer_pick:
+        return "nobody wins"
     else:
         return "computer_wins"
