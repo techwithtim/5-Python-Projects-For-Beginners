@@ -15,9 +15,13 @@ while True:
     if rps_match.rps_match(user_input) == "user_wins":
         print("You won!")
         user_wins += 1
-    else:
+
+    elif rps_match.rps_match(user_input) == "computer_wins":
         print("You lost!")
         computer_wins += 1
+    else:
+        print("Nobody wins!")
+
 
 print("You won", user_wins, "times.")
 print("The computer won", computer_wins, "times.")
