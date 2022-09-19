@@ -1,4 +1,3 @@
 # 5-Python-Projects-For-Beginners
 
-Első commit tartalma
-Saját commit 2
+Első commit tartalma, és a második commit tartalma
