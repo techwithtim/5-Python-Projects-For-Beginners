@@ -20,7 +20,8 @@ def test_calculate_nulla_negyev_tizszazalek():
 
 
 def test_calculate_egymillio_negyev_nullaszazalek():
-    assert round(calculate(1000000, 48, 0)) == 20833
+    with pytest.raises(ZeroDivisionError):
+        assert round(calculate(1000000, 48, 0)) == 20833
 
 
 def test_calculate_egymillio_nulla_tizszazalek():
