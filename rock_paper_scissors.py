@@ -5,6 +5,14 @@ computer_wins = 0
 
 options = ["rock", "paper", "scissors"]
 
+# implementing basic function
+def win(user_input, computer_pick):
+    # conditions is p > r, r > s, s > p
+    if (user_input == "rock" and computer_pick == "scissors") or (user_input == "scissor" and computer_pick == "paper") \
+            or (user_input == "paper" and computer_pick == "rock"):
+        return True
+    return False
+
 while True:
     user_input = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
     if user_input == "q":
@@ -13,23 +21,18 @@ while True:
     if user_input not in options:
         continue
 
-    random_number = random.randint(0, 2)
     # rock: 0, paper: 1, scissors: 2
-    computer_pick = options[random_number]
-    print("Computer picked", computer_pick + ".")
+    # choosing from option lists
+    computer_pick = random.choice(options)
+    print(f"Computer picked {computer_pick}.")
 
-    if user_input == "rock" and computer_pick == "scissors":
+    # adding draw condition
+    if user_input == computer_pick:
+        print("Draw!")
+
+    elif win(user_input, computer_pick):
         print("You won!")
         user_wins += 1
-
-    elif user_input == "paper" and computer_pick == "rock":
-        print("You won!")
-        user_wins += 1
-
-    elif user_input == "scissors" and computer_pick == "paper":
-        print("You won!")
-        user_wins += 1
-
     else:
         print("You lost!")
         computer_wins += 1
