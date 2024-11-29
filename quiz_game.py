@@ -36,5 +36,19 @@ if answer.lower() == "power supply":
 else:
     print("Incorrect!")
 
+answer = input("What does AI stand for? ")
+if answer.lower() == "artificial intelligence":
+    print('Correct!')
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input("Who is The CEO of Tesla?")
+if answer.lower() == "elon musk":
+    print('Correct!')
+    score += 1
+else:
+    print("Incorrect!")
+
 print("You got " + str(score) + " questions correct!")
-print("You got " + str((score / 4) * 100) + "%.")
+print("You got " + str((score / 6) * 100) + "%.")
