@@ -3,6 +3,20 @@ import random
 user_wins = 0
 computer_wins = 0
 
+# ----- LOADING SCORE -----
+try:
+    with open("score.txt", "r") as f:
+        data = f.read().strip()
+        if data:
+            user_wins, computer_wins = map(int, data.split(","))
+        else:
+            user_wins = 0
+            computer_wins = 0
+except:
+    user_wins = 0
+    computer_wins = 0
+
+
 options = ["rock", "paper", "scissors"]
 
 while True:
@@ -33,6 +47,9 @@ while True:
     else:
         print("You lost!")
         computer_wins += 1
+# ----- SAVE SCORE ----- 
+with open("score.txt", "w") as f:
+    f.write(f"{user_wins},{computer_wins}")
 
 print("You won", user_wins, "times.")
 print("The computer won", computer_wins, "times.")
