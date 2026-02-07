@@ -47,6 +47,10 @@ while True:
     else:
         print("You lost!")
         computer_wins += 1
+# ----- SAVE SCORE -----
+#         
+with open("score.txt", "w") as f:
+    f.write(f"{user_wins},{computer_wins}")
 
 print("You won", user_wins, "times.")
 print("The computer won", computer_wins, "times.")
