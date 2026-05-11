@@ -11,4 +11,6 @@
 - 🎯 **45,000+ job openings** in the market  
 
 👉 **[Start your journey today!](https://techwithtim.net/dev)**  
-No experience needed—just your determination. Future-proof your career and unlock six-figure potential like many of our students have!  
+No experience needed—just your determination. Future-proof your career and unlock six-figure potential like man y of our students have!  
+
+Small update for Git homework.
