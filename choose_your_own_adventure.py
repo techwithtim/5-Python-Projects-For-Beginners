@@ -24,7 +24,8 @@ elif answer == "right":
     elif answer == "cross":
         answer = input(
             "You cross the bridge and meet a stranger. Do you talk to them (yes/no)? ")
-
+    else:
+        print("You died because you choose a thing out of option!")
         if answer == "yes":
             print("You talk to the stanger and they give you gold. You WIN!")
         elif answer == "no":
