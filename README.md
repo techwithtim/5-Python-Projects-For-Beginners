@@ -14,4 +14,5 @@
 No experience needed—just your determination. Future-proof your career and unlock six-figure potential like many of our students have!
 ## New Feature
 
-This project was updated as part of Git and GitHub collaborative development.  
+This project was updated as part of Git and GitHub collaborative development. 
+This update improves the project documentation and makes it easier for new users to understand the project. 
