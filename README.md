@@ -12,3 +12,6 @@
 
 👉 **[Start your journey today!](https://techwithtim.net/dev)**  
 No experience needed—just your determination. Future-proof your career and unlock six-figure potential like many of our students have!  
+## My Contribution
+
+Added improvements and documentation as part of the Git/GitHub collaborative workflow.
